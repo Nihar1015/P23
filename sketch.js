@@ -28,8 +28,15 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
 
-	box1Sprite=createSprite(400, 700, 200, 20);
-	box1Sprite.shapeColor=(255,0,0);
+	box1Sprite=createSprite(400, 655, 200, 	10);
+	box1Sprite.shapeColor=color(255,0,0);
+
+	box2Sprite = createSprite(305,585, 10,150);
+	box2Sprite.shapeColor=color(255,0,0);
+
+	box3Sprite = createSprite(495,585,10,150)
+	box3Sprite.shapeColor=color(255,0,0);
+	
 
     
 
@@ -46,8 +53,14 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	 World.add(world, ground);
 	 
-	 box1 = Bodies.rectangle(width/2,680,200,20,{isStatic: true});
+	 box1 = Bodies.rectangle(400,655,200,10,{isStatic: true});
 	 World.add(world, box1);
+
+	 box2 = Bodies.rectangle(305,595, 10,150,{isStatic: true});
+	 World.add(world, box2);
+
+	 box3 = Bodies.rectangle(495,585,10,150,{isStatic: true});
+	 World.add(world, box3);
 	 
 
    
@@ -71,6 +84,7 @@ function keyPressed() {
 	packageSprite.x = packageBody.position.x
 	packageSprite.y = packageBody.position.y
 	Matter.Body.setStatic(packageBody,false);
+
     
   }
 }
